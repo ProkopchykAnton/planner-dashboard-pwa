@@ -12,21 +12,25 @@ document.getElementById('app').innerHTML = `
       <section class="card">
         <h2>Time</h2>
         <div id="clock" class="value">--:--:--</div>
+        <div class="muted">Live</div>
       </section>
 
       <section class="card">
         <h2>Weather</h2>
         <div id="weather" class="value">--</div>
+        <div id="weather-hours" class="list"></div>
+        <div class="muted">Open-Meteo (next 12h)</div>
       </section>
 
       <section class="card">
         <h2>Calendar</h2>
-        <div id="calendar" class="muted">Next step…</div>
+        <div id="calendar" class="list"></div>
+        <div class="muted">public/events.json</div>
       </section>
     </div>
   </div>
 `;
 
 initClock('clock');
-initWeather('weather');
+initWeather('weather', 'weather-hours');
 initCalendar('calendar');
